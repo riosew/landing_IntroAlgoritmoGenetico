@@ -16,6 +16,8 @@
             --border: #e2e8f0;
             --accent-bg: #ecfdf5;
             --highlight-bg: #f0fdf4;
+            --whatsapp: #25d366;
+            --whatsapp-hover: #1da851;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,8 +29,11 @@
         header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 20px 0; position: sticky; top: 0; z-index: 100; }
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 700; font-size: 1.1rem; color: var(--primary); }
-        .btn-nav { background: var(--primary); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: background 0.2s; }
+        .nav-actions { display: flex; gap: 10px; align-items: center; }
+        .btn-nav { background: var(--primary); color: white; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: background 0.2s; }
         .btn-nav:hover { background: var(--primary-hover); }
+        .btn-ws-nav { background: var(--whatsapp); color: white; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: background 0.2s; display: flex; align-items: center; gap: 6px; }
+        .btn-ws-nav:hover { background: var(--whatsapp-hover); }
 
         /* Hero Section */
         .hero { padding: 50px 0 30px; text-align: center; }
@@ -112,10 +117,17 @@
         .var-item ul li { font-size: 0.85rem; color: var(--text-muted); padding: 4px 0; display: flex; align-items: flex-start; }
         .var-item ul li::before { content: "•"; color: var(--primary); font-weight: bold; margin-right: 8px; }
 
-        .projects-contact { text-align: center; background: var(--highlight-bg); border: 1px solid #a7f3d0; border-radius: 10px; padding: 24px; }
-        .projects-contact p { font-size: 0.95rem; color: var(--text-main); margin-bottom: 14px; }
-        .contact-linkedin-btn { background: #0077b5; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: inline-block; transition: background 0.2s; }
-        .contact-linkedin-btn:hover { background: #005582; }
+        /* Contact Section */
+        .contact-box { text-align: center; background: var(--highlight-bg); border: 1px solid #a7f3d0; border-radius: 10px; padding: 28px; }
+        .contact-box h4 { font-size: 1.1rem; color: var(--text-main); font-weight: 700; margin-bottom: 8px; }
+        .contact-box p { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 20px; }
+        .contact-buttons-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+        .contact-btn-ws { background: var(--whatsapp); color: white; padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+        .contact-btn-ws:hover { background: var(--whatsapp-hover); }
+        .contact-btn-web { background: var(--primary); color: white; padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+        .contact-btn-web:hover { background: var(--primary-hover); }
+        .contact-btn-in { background: #0077b5; color: white; padding: 12px 22px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+        .contact-btn-in:hover { background: #005582; }
 
         /* CTA Section */
         .cta-section { background: var(--accent-bg); border: 1px solid #a7f3d0; border-radius: 16px; padding: 45px 25px; text-align: center; margin: 50px 0 60px; }
@@ -130,7 +142,10 @@
     <header>
         <div class="container nav-wrapper">
             <div class="logo">🧬 Natural Code Lab</div>
-            <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav">Acceder al Taller</a>
+            <div class="nav-actions">
+                <a href="https://wa.link/usp22c" target="_blank" class="btn-ws-nav">💬 WhatsApp</a>
+                <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav">Acceder al Taller</a>
+            </div>
         </div>
     </header>
 
@@ -344,11 +359,21 @@
                     </div>
                 </div>
 
-                <div class="projects-contact">
-                    <p><strong>¿Tienes un requerimiento específico o necesitas cotizar un proyecto?</strong> Contacta directamente al instructor a través de sus redes:</p>
-                    <a href="https://www.linkedin.com/in/ernesto-rios-willars-304325138/" target="_blank" class="contact-linkedin-btn">
-                        💼 Cotizar Proyecto con el Dr. Ernesto Ríos-Willars en LinkedIn
-                    </a>
+                <!-- Contacto Multicanal -->
+                <div class="contact-box">
+                    <h4>💬 ¿Tienes un proyecto o consulta específica?</h4>
+                    <p>Cotiza tu proyecto a la medida o resuelve tus dudas directamente con el instructor por el canal que prefieras:</p>
+                    <div class="contact-buttons-grid">
+                        <a href="https://wa.link/usp22c" target="_blank" class="contact-btn-ws">
+                            💬 Contactar por WhatsApp Directo
+                        </a>
+                        <a href="https://denivel.com/mod/page/view.php?id=419" target="_blank" class="contact-btn-web">
+                            🌐 Formulario de Contacto en denivel.com
+                        </a>
+                        <a href="https://www.linkedin.com/in/ernesto-rios-willars-304325138/" target="_blank" class="contact-btn-in">
+                            💼 Perfil de LinkedIn
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
