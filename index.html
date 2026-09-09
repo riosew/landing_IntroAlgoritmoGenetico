@@ -90,9 +90,32 @@
         .platform-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 32px; max-width: 850px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
         .platform-header { text-align: center; margin-bottom: 24px; }
         .platform-title { font-size: 1.3rem; font-weight: 700; color: var(--text-main); margin-bottom: 6px; }
-        .credentials-box { background: var(--highlight-bg); border: 1px solid #a7f3d0; border-radius: 8px; padding: 20px; text-align: center; max-width: 500px; margin: 0 auto 20px; }
+        .credentials-box { background: var(--highlight-bg); border: 1px solid #a7f3d0; border-radius: 8px; padding: 20px; text-align: center; max-width: 500px; margin: 0 auto; }
         .credentials-title { font-size: 0.9rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; text-transform: uppercase; }
         .cred-item { font-family: monospace; font-size: 1rem; color: var(--text-main); background: var(--surface); border: 1px solid var(--border); padding: 6px 12px; border-radius: 4px; display: inline-block; margin: 4px; }
+
+        /* Projects & Consulting Section */
+        .projects-section { margin: 50px 0; }
+        .projects-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 36px; max-width: 950px; margin: 0 auto; }
+        .projects-intro { font-size: 1rem; color: var(--text-muted); text-align: center; max-width: 800px; margin: 0 auto 30px; }
+        .projects-target-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px; }
+        .target-card { background: var(--bg-main); border: 1px solid var(--border); border-radius: 8px; padding: 20px; text-align: center; }
+        .target-card .target-icon { font-size: 1.8rem; margin-bottom: 8px; }
+        .target-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 6px; }
+        .target-card p { font-size: 0.82rem; color: var(--text-muted); }
+
+        .variables-box { background: var(--bg-main); border: 1px solid var(--border); border-radius: 10px; padding: 24px; margin-bottom: 30px; }
+        .variables-box h4 { font-size: 1rem; color: var(--primary); font-weight: 700; margin-bottom: 16px; text-align: center; }
+        .variables-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .var-item strong { display: block; font-size: 0.9rem; color: var(--text-main); margin-bottom: 8px; }
+        .var-item ul { list-style: none; padding: 0; }
+        .var-item ul li { font-size: 0.85rem; color: var(--text-muted); padding: 4px 0; display: flex; align-items: flex-start; }
+        .var-item ul li::before { content: "•"; color: var(--primary); font-weight: bold; margin-right: 8px; }
+
+        .projects-contact { text-align: center; background: var(--highlight-bg); border: 1px solid #a7f3d0; border-radius: 10px; padding: 24px; }
+        .projects-contact p { font-size: 0.95rem; color: var(--text-main); margin-bottom: 14px; }
+        .contact-linkedin-btn { background: #0077b5; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; display: inline-block; transition: background 0.2s; }
+        .contact-linkedin-btn:hover { background: #005582; }
 
         /* CTA Section */
         .cta-section { background: var(--accent-bg); border: 1px solid #a7f3d0; border-radius: 16px; padding: 45px 25px; text-align: center; margin: 50px 0 60px; }
@@ -261,7 +284,71 @@
                     <div class="credentials-title">🔑 Acceso Gratuito como Invitado</div>
                     <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Puedes ingresar directamente con las siguientes credenciales:</p>
                     <div><strong>Usuario:</strong> <span class="cred-item">usuario_invitado</span></div>
-                    <div><strong>Contraseña:</strong> <span class="cred-item">invitado77# (con D mayúscula)</span></div>
+                    <div><strong>Contraseña:</strong> <span class="cred-item">invitaDo77#</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos a Medida y Consultoría -->
+        <section class="projects-section">
+            <div class="projects-card">
+                <h2 class="section-title">🚀 Desarrollo de Proyectos a Medida</h2>
+                <p class="projects-intro">
+                    En <strong>Natural Code Lab</strong> también trabajamos <strong>por proyecto</strong>. Los Algoritmos Genéticos poseen aplicaciones específicas en cualquier área donde exista un problema bien definido con una función a optimizar (ya sea de <strong>maximización</strong> o <strong>minimización</strong>).
+                </p>
+
+                <div class="projects-target-grid">
+                    <div class="target-card">
+                        <div class="target-icon">🎓</div>
+                        <h4>Estudiantes de Posgrado</h4>
+                        <p>Desarrollo del capítulo de procesamiento computacional, simulación u optimización para tesis de Maestría o Doctorado.</p>
+                    </div>
+                    <div class="target-card">
+                        <div class="target-icon">🔬</div>
+                        <h4>Investigadores</h4>
+                        <p>Optimización evolutiva aplicada a Biología, Medicina, Economía, Finanzas, Ecología, Agronomía, Sociología o Turismo.</p>
+                    </div>
+                    <div class="target-card">
+                        <div class="target-icon">🏭</div>
+                        <h4>Proyectos Industriales</h4>
+                        <p>Reducción de costos operativos, eficiencia energética, logística de distribución y diseño de componentes.</p>
+                    </div>
+                    <div class="target-card">
+                        <div class="target-icon">📚</div>
+                        <h4>Docentes y Aficionados</h4>
+                        <p>Asesoría personalizada, desarrollo de scripts a la medida en Python y modelos educativos de simulación.</p>
+                    </div>
+                </div>
+
+                <div class="variables-box">
+                    <h4>Ejemplos de Variables que el Algoritmo Genético Puede Optimizar:</h4>
+                    <div class="variables-grid">
+                        <div class="var-item">
+                            <strong>🔀 Combinatorias y Discretas:</strong>
+                            <ul>
+                                <li>Secuenciación y ruteo de vehículos (VRP / TSP).</li>
+                                <li>Asignación de horarios académicos o laborales (Timetabling).</li>
+                                <li>Selección de subconjuntos de genes o variables clave.</li>
+                                <li>Alineamiento múltiple de secuencias biológicas (MSA).</li>
+                            </ul>
+                        </div>
+                        <div class="var-item">
+                            <strong>📈 Continuas y Reales:</strong>
+                            <ul>
+                                <li>Pesos de portafolios de inversión (Modelo de Markowitz).</li>
+                                <li>Dimensiones físicas, geometría alar o estructuras de acero.</li>
+                                <li>Dosis medicamentosas y ángulos de radioterapia.</li>
+                                <li>Parámetros de riego, mezclas de insumos o modelos metabólicos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-contact">
+                    <p><strong>¿Tienes un requerimiento específico o necesitas cotizar un proyecto?</strong> Contacta directamente al instructor a través de sus redes:</p>
+                    <a href="https://www.linkedin.com/in/ernesto-rios-willars-304325138/" target="_blank" class="contact-linkedin-btn">
+                        💼 Cotizar Proyecto con el Dr. Ernesto Ríos-Willars en LinkedIn
+                    </a>
                 </div>
             </div>
         </section>
