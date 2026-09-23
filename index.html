@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimización Evolutiva para Tesistas, Investigadores y Profesionales</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Curso Completo: Optimización Evolutiva con Algoritmos Genéticos en Python</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-main: #f8fafc;
@@ -18,6 +18,7 @@
             --highlight-bg: #f0fdf4;
             --whatsapp: #25d366;
             --whatsapp-hover: #1da851;
+            --price-student: #0284c7;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,9 +27,9 @@
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
         
         /* Header */
-        header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 20px 0; position: sticky; top: 0; z-index: 100; }
+        header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 18px 0; position: sticky; top: 0; z-index: 100; }
         .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 700; font-size: 1.1rem; color: var(--primary); }
+        .logo { font-weight: 800; font-size: 1.15rem; color: var(--primary); }
         .nav-actions { display: flex; gap: 10px; align-items: center; }
         .btn-nav { background: var(--primary); color: white; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: background 0.2s; }
         .btn-nav:hover { background: var(--primary-hover); }
@@ -37,26 +38,40 @@
 
         /* Hero Section */
         .hero { padding: 50px 0 30px; text-align: center; }
-        .badge { background: var(--accent-bg); color: var(--primary); padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: 0.85rem; display: inline-block; margin-bottom: 20px; border: 1px solid #a7f3d0; }
-        h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; color: var(--text-main); }
-        .subtitle { font-size: 1.15rem; color: var(--text-muted); max-width: 780px; margin: 0 auto 25px; font-weight: 400; }
-        .target-audience { background: var(--surface); border: 1px solid var(--border); padding: 10px 20px; border-radius: 8px; display: inline-block; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 30px; }
+        .badge { background: var(--accent-bg); color: var(--primary); padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-block; margin-bottom: 18px; border: 1px solid #a7f3d0; }
+        h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 16px; color: var(--text-main); }
+        .subtitle { font-size: 1.15rem; color: var(--text-muted); max-width: 820px; margin: 0 auto 25px; font-weight: 400; }
+        .target-audience { background: var(--surface); border: 1px solid var(--border); padding: 10px 22px; border-radius: 8px; display: inline-block; font-size: 0.9rem; color: var(--text-muted); margin-bottom: 30px; }
         .target-audience strong { color: var(--text-main); }
 
         /* Video Container */
-        .video-container { max-width: 800px; margin: 0 auto 40px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border: 1px solid var(--border); background: #000; position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-container { max-width: 820px; margin: 0 auto 40px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border: 1px solid var(--border); background: #000; position: relative; padding-bottom: 56.25%; height: 0; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        /* Pricing Section */
+        .pricing-section { margin: 40px 0 60px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 850px; margin: 0 auto; }
+        .price-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 32px 24px; text-align: center; position: relative; transition: transform 0.2s, box-shadow 0.2s; }
+        .price-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .price-card.featured { border: 2px solid var(--price-student); background: #f0f9ff; }
+        .price-tag-featured { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--price-student); color: white; font-size: 0.75rem; font-weight: 700; padding: 4px 14px; border-radius: 12px; text-transform: uppercase; }
+        .price-title { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px; }
+        .price-amount { font-size: 2.2rem; font-weight: 800; color: var(--text-main); margin: 12px 0 4px; }
+        .price-currency { font-size: 0.9rem; color: var(--text-muted); font-weight: 600; margin-bottom: 20px; }
+        .price-features { list-style: none; text-align: left; margin-bottom: 24px; }
+        .price-features li { font-size: 0.88rem; color: var(--text-muted); padding: 6px 0; border-bottom: 1px dashed var(--border); display: flex; align-items: center; }
+        .price-features li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 8px; }
 
         /* Insights / Key Info Section */
         .insights-section { margin-bottom: 50px; }
-        .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; max-width: 950px; margin: 0 auto; }
+        .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; max-width: 950px; margin: 0 auto; }
         .insight-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-align: center; }
         .insight-card .icon { font-size: 1.5rem; margin-bottom: 8px; }
         .insight-card .label { font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; letter-spacing: 0.05em; }
         .insight-card .value { font-size: 1.05rem; font-weight: 700; color: var(--text-main); margin-top: 4px; }
 
         /* Section Titles */
-        .section-title { text-align: center; font-size: 1.7rem; font-weight: 700; margin-bottom: 10px; }
+        .section-title { text-align: center; font-size: 1.75rem; font-weight: 800; margin-bottom: 10px; }
         .section-desc { text-align: center; color: var(--text-muted); margin-bottom: 35px; font-size: 0.95rem; }
 
         /* Instructor Section */
@@ -68,27 +83,25 @@
         .link-btn { background: var(--surface); border: 1px solid var(--border); color: var(--text-main); padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
         .link-btn:hover { border-color: var(--primary); color: var(--primary); }
 
+        /* Syllabus Section - 4 Fases */
+        .syllabus-section { padding: 50px 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .modules-wrapper { max-width: 850px; margin: 0 auto; }
+        .module-card { background: var(--bg-main); border: 1px solid var(--border); border-radius: 12px; padding: 26px; margin-bottom: 20px; transition: border-color 0.2s; }
+        .module-card:hover { border-color: var(--primary); }
+        .module-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+        .module-title { font-size: 1.15rem; font-weight: 700; color: var(--text-main); }
+        .module-tag { font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 12px; text-transform: uppercase; background: var(--accent-bg); color: var(--primary); border: 1px solid #a7f3d0; }
+        .module-list { list-style: none; }
+        .module-list li { font-size: 0.9rem; color: var(--text-muted); padding: 6px 0; border-bottom: 1px dashed var(--border); display: flex; align-items: center; }
+        .module-list li:last-child { border-bottom: none; }
+        .module-list li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 10px; }
+
         /* Multidisciplinary Applications */
-        .apps-section { padding-bottom: 50px; }
+        .apps-section { padding: 50px 0; }
         .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
         .app-item { background: var(--surface); border: 1px solid var(--border); padding: 18px; border-radius: 8px; }
         .app-item h4 { font-size: 0.95rem; margin-bottom: 6px; color: var(--text-main); }
         .app-item p { font-size: 0.85rem; color: var(--text-muted); }
-
-        /* Syllabus Section */
-        .syllabus-section { padding: 50px 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-        .modules-wrapper { max-width: 800px; margin: 0 auto; }
-        .module-card { background: var(--bg-main); border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 18px; }
-        .module-card.active { border-color: var(--primary); background: var(--surface); box-shadow: 0 4px 12px rgba(5, 150, 105, 0.08); }
-        .module-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-        .module-title { font-size: 1.1rem; font-weight: 700; color: var(--text-main); }
-        .module-tag { font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 12px; text-transform: uppercase; }
-        .tag-free { background: #dcfce7; color: #15803d; }
-        .tag-next { background: #e2e8f0; color: #475569; }
-        .module-list { list-style: none; }
-        .module-list li { font-size: 0.9rem; color: var(--text-muted); padding: 6px 0; border-bottom: 1px dashed var(--border); display: flex; align-items: center; }
-        .module-list li:last-child { border-bottom: none; }
-        .module-list li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 8px; }
 
         /* Platform & Guest Credentials Section */
         .platform-section { margin: 50px 0; }
@@ -144,7 +157,7 @@
             <div class="logo">🧬 Natural Code Lab</div>
             <div class="nav-actions">
                 <a href="https://wa.link/usp22c" target="_blank" class="btn-ws-nav">💬 WhatsApp</a>
-                <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav">Acceder al Taller</a>
+                <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav">Inscribirme al Curso</a>
             </div>
         </div>
     </header>
@@ -152,24 +165,63 @@
     <main class="container">
         <!-- Hero -->
         <section class="hero">
-            <span class="badge">Módulo 1 de 4 • Acceso Gratuito Online</span>
+            <span class="badge">Curso Completo • 4 Fases Integrales • Programación en Python</span>
             <h1>Optimización Evolutiva para Tesistas, Investigadores y Profesionales</h1>
-            <p class="subtitle">Aprende a encontrar la solución óptima en espacios de búsqueda gigantescos donde los métodos tradicionales fallan.</p>
+            <p class="subtitle">Aprende a programar el ciclo evolutivo completo de un Algoritmo Genético desde cero para resolver problemas complejos de optimización continua y discreta.</p>
 
             <div class="target-audience">
-                🎯 <strong>Dirigido a:</strong> Tesistas e Investigadores Académicos o Industriales
+                🎯 <strong>Dirigido a:</strong> Tesistas de Licenciatura y Posgrado, Investigadores Académicos o Industriales y Profesionales
             </div>
 
             <!-- Video Embebido -->
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/lcJ80O6qwS8?start=1235" title="Introducción al Taller de Algoritmos Genéticos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/lcJ80O6qwS8?start=1235" title="Introducción al Curso de Algoritmos Genéticos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section">
+            <h2 class="section-title">Inversión del Curso</h2>
+            <p class="section-desc">Accede a las 4 Fases del programa académico con tarifa preferencial para la comunidad estudiantil:</p>
+
+            <div class="pricing-grid">
+                <!-- Tarjeta Estudiantes/Tesistas -->
+                <div class="price-card featured">
+                    <span class="price-tag-featured">Tarifa Preferencial</span>
+                    <div class="price-title">Estudiantes y Tesistas</div>
+                    <div class="price-amount">$2,499 MXN</div>
+                    <div class="price-currency">Pago único • Acceso total</div>
+                    <ul class="price-features">
+                        <li>Acceso completo a las 4 Fases del Curso</li>
+                        <li>Código fuente en Python listo para reutilizar</li>
+                        <li>Entorno privado Moodle en Natural Code Lab</li>
+                        <li>Asesoría y acompañamiento del instructor</li>
+                        <li>Constancia de participación incluida</li>
+                    </ul>
+                    <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav" style="background: var(--price-student); display: block;">Inscribirme con Descuento 🚀</a>
+                </div>
+
+                <!-- Tarjeta Público General -->
+                <div class="price-card">
+                    <div class="price-title">Público General e Industria</div>
+                    <div class="price-amount">$3,988 MXN</div>
+                    <div class="price-currency">Pago único • Acceso total</div>
+                    <ul class="price-features">
+                        <li>Acceso completo a las 4 Fases del Curso</li>
+                        <li>Código fuente en Python listo para reutilizar</li>
+                        <li>Entorno privado Moodle en Natural Code Lab</li>
+                        <li>Aplicación a proyectos profesionales/industriales</li>
+                        <li>Constancia de participación incluida</li>
+                    </ul>
+                    <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav" style="display: block;">Inscribirme al Curso 🚀</a>
+                </div>
             </div>
         </section>
 
         <!-- Insights del Taller -->
         <section class="insights-section">
-            <h2 class="section-title">Ficha Técnica del Taller</h2>
-            <p class="section-desc">Todo lo que necesitas saber antes de comenzar:</p>
+            <h2 class="section-title">Ficha Técnica del Programa</h2>
+            <p class="section-desc">Detalles operativos de la formación:</p>
             
             <div class="insights-grid">
                 <div class="insight-card">
@@ -178,9 +230,9 @@
                     <div class="value">Asíncrona Virtual</div>
                 </div>
                 <div class="insight-card">
-                    <div class="icon">⏱️</div>
-                    <div class="label">Duración</div>
-                    <div class="value">1.5 Horas</div>
+                    <div class="icon">🔄</div>
+                    <div class="label">Cobertura</div>
+                    <div class="value">4 Fases Integrales</div>
                 </div>
                 <div class="insight-card">
                     <div class="icon">🌐</div>
@@ -194,8 +246,71 @@
                 </div>
                 <div class="insight-card">
                     <div class="icon">📜</div>
-                    <div class="label">Constancia Op.</div>
-                    <div class="value">$499 MXN</div>
+                    <div class="label">Constancia</div>
+                    <div class="value">Incluida</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Temario Completo: Las 4 Fases -->
+        <section class="syllabus-section">
+            <h2 class="section-title">Temario Integral: Las 4 Fases Evolutivas</h2>
+            <p class="section-desc">Domina cada etapa técnica del ciclo de vida de un Algoritmo Genético:</p>
+
+            <div class="modules-wrapper">
+                <!-- Fase 1 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-title">Fase 1: Representación, Codificación e Inicialización</div>
+                        <span class="module-tag">Módulo 1</span>
+                    </div>
+                    <ul class="module-list">
+                        <li>Traducción del problema real: Mapeo del Genotipo al Fenotipo [1.1].</li>
+                        <li>Codificación de cromosomas en Python: Cadenas Binarias y Vectores Reales [1.2, 1.3].</li>
+                        <li>Diseño y formulación matemática de la Función de Aptitud (Fitness) [2.1].</li>
+                        <li>Inicialización de la Población (Generación 0) y muestreo de diversidad.</li>
+                    </ul>
+                </div>
+
+                <!-- Fase 2 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-title">Fase 2: Métodos de Selección y Presión Evolutiva</div>
+                        <span class="module-tag">Módulo 2</span>
+                    </div>
+                    <ul class="module-list">
+                        <li>Mecanismos darwinianos: Supervivencia del más apto aplicada al código [2.1].</li>
+                        <li>Selección por Torneo: Control numérico de la presión selectiva mediante k [2.2].</li>
+                        <li>Selección por Rueda de Ruleta (Proporcional) y Selección por Rango [2.3, 2.4].</li>
+                        <li>Estrategias de Elitismo para preservar los mejores especímenes [2.5].</li>
+                    </ul>
+                </div>
+
+                <!-- Fase 3 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-title">Fase 3: Cruza o Recombinación Genética</div>
+                        <span class="module-tag">Módulo 3</span>
+                    </div>
+                    <ul class="module-list">
+                        <li>Fundamentos de la recombinación: Intercambio de bloques constructivos [3.1].</li>
+                        <li>Operadores de Cruzamiento: Un Punto, Múltiples Puntos y Cruzamiento Uniforme [3.2, 3.3, 3.4].</li>
+                        <li>Calibración de la Tasa de Cruza (r_cross) para balancear exploración y explotación [3.1].</li>
+                    </ul>
+                </div>
+
+                <!-- Fase 4 -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-title">Fase 4: Mutación, Diversidad Genética y Proyectos</div>
+                        <span class="module-tag">Módulo 4</span>
+                    </div>
+                    <ul class="module-list">
+                        <li>Mecanismos de mutación binaria (Bit Flipping) y mutación real uniforme [4.1, 4.2, 4.3].</li>
+                        <li>Formulación de la Tasa de Mutación Óptima (p_m = 1/L) [4.1].</li>
+                        <li>Control de límites físicos mediante operador de Clipping [4.4].</li>
+                        <li>Proyecto Aplicado: Optimización en la Función Rastrigin (Hiper-multimodal 3D) [4.4].</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -218,71 +333,24 @@
         <!-- Aplicaciones Multidisciplinarias -->
         <section class="apps-section">
             <h2 class="section-title">Una sola herramienta, infinitas aplicaciones</h2>
-            <p class="section-desc">Si tu proyecto involucra métricas de interés, los Algoritmos Genéticos son para ti:</p>
+            <p class="section-desc">Si tu proyecto involucra métricas de interés por maximizar o minimizar, los Algoritmos Genéticos son para ti:</p>
 
             <div class="apps-grid">
                 <div class="app-item">
                     <h4>📊 Economía y Finanzas</h4>
-                    <p>Optimización de portafolios de inversión y modelos de equilibrio.</p>
+                    <p>Optimización de portafolios de inversión (Modelo de Markowitz) y equilibrio económico.</p>
                 </div>
                 <div class="app-item">
                     <h4>🧬 Biología y Salud</h4>
-                    <p>Alineamiento de secuencias (MSA) y planificación de radioterapia.</p>
+                    <p>Alineamiento múltiple de secuencias (MSA) y planificación de dosis en radioterapia.</p>
                 </div>
                 <div class="app-item">
                     <h4>🚚 Logística y Rutas</h4>
-                    <p>Problema del viajante (TSP) y ruteo de vehículos de carga (VRP).</p>
+                    <p>Problema del viajante (TSP) y ruteo eficiente de vehículos de carga (VRP).</p>
                 </div>
                 <div class="app-item">
                     <h4>🏗️ Ingeniería y Energía</h4>
-                    <p>Diseño de estructuras, perfiles alares y despacho de energía.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Temario -->
-        <section class="syllabus-section">
-            <h2 class="section-title">Temario del Taller</h2>
-            <p class="section-desc">Comienza con la Fase 1 y continua con el ciclo evolutivo completo:</p>
-
-            <div class="modules-wrapper">
-                <!-- Fase 1 (Gratis) -->
-                <div class="module-card active">
-                    <div class="module-header">
-                        <div class="module-title">Fase 1: Inicialización de la Población (Tema 1)</div>
-                        <span class="module-tag tag-free">Acceso Gratuito</span>
-                    </div>
-                    <ul class="module-list">
-                        <li>Traducción del problema real: Del Genotipo al Fenotipo.</li>
-                        <li>Codificación de cromosomas en Python (Binaria y Real).</li>
-                        <li>Diseño y evaluación de la Función de Aptitud (Fitness).</li>
-                        <li>Inicialización de la Generación 0 y muestreo de diversidad.</li>
-                    </ul>
-                </div>
-
-                <!-- Próximas Fases -->
-                <div class="module-card">
-                    <div class="module-header">
-                        <div class="module-title">Fase 2: Métodos de Selección (Tema 2)</div>
-                        <span class="module-tag tag-next">Siguiente Fase</span>
-                    </div>
-                    <p style="font-size: 0.85rem; color: #64748b;">Selección por Torneo, Rueda de Ruleta, Selección por Rango y preservación de élites.</p>
-                </div>
-
-                <div class="module-card">
-                    <div class="module-header">
-                        <div class="module-title">Fase 3: Cruza o Recombinación (Tema 3)</div>
-                        <span class="module-tag tag-next">Siguiente Fase</span>
-                    </div>
-                    <p style="font-size: 0.85rem; color: #64748b;">Cruzamiento de 1 punto, N puntos y Uniforme para heredar bloques constructivos.</p>
-                </div>
-
-                <div class="module-card">
-                    <div class="module-header">
-                        <div class="module-title">Fase 4: Mutación y Proyectos (Tema 4)</div>
-                        <span class="module-tag tag-next">Siguiente Fase</span>
-                    </div>
-                    <p style="font-size: 0.85rem; color: #64748b;">Inversión de bits (Bit Flipping), preservación de diversidad y proyectos aplicados (Rastrigin).</p>
+                    <p>Diseño de perfiles alares, estructuras de acero y despacho económico de energía.</p>
                 </div>
             </div>
         </section>
@@ -292,14 +360,14 @@
             <div class="platform-card">
                 <div class="platform-header">
                     <div class="platform-title">🏫 Plataforma de Aprendizaje: Natural Code Lab</div>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">El taller se imparte dentro del entorno privado Moodle en <a href="https://www.denivel.com" target="_blank" style="color: var(--primary); font-weight: 600;">www.denivel.com</a></p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">El curso se imparte dentro del entorno privado Moodle en <a href="https://www.denivel.com" target="_blank" style="color: var(--primary); font-weight: 600;">www.denivel.com</a></p>
                 </div>
 
                 <div class="credentials-box">
-                    <div class="credentials-title">🔑 Acceso Gratuito como Invitado</div>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Puedes ingresar directamente con las siguientes credenciales:</p>
+                    <div class="credentials-title">🔑 Acceso de Prueba como Invitado</div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Explora el entorno de clase con las siguientes credenciales de muestra:</p>
                     <div><strong>Usuario:</strong> <span class="cred-item">usuario_invitado</span></div>
-                    <div><strong>Contraseña:</strong> <span class="cred-item">invitado77# (d mayúscula)</span></div>
+                    <div><strong>Contraseña:</strong> <span class="cred-item">invitaDo77#</span></div>
                 </div>
             </div>
         </section>
@@ -309,7 +377,7 @@
             <div class="projects-card">
                 <h2 class="section-title">🚀 Desarrollo de Proyectos a Medida</h2>
                 <p class="projects-intro">
-                    En <strong>Natural Code Lab</strong> también trabajamos <strong>por proyecto</strong>. Los Algoritmos Genéticos poseen aplicaciones específicas en cualquier área donde exista un problema bien definido con una función a optimizar (ya sea de <strong>maximización</strong> o <strong>minimización</strong>).
+                    En <strong>Natural Code Lab</strong> también trabajamos <strong>por proyecto</strong>. Desarrollamos soluciones a la medida para cualquier disciplina donde exista un problema bien definido con una función a optimizar (ya sea de <strong>maximización</strong> o <strong>minimización</strong>).
                 </p>
 
                 <div class="projects-target-grid">
@@ -380,14 +448,14 @@
 
         <!-- CTA final -->
         <section class="cta-section">
-            <h2>Da el siguiente paso en tu proyecto de investigación</h2>
-            <p style="color: var(--text-muted); margin: 12px 0 25px;">Ingresa a la plataforma y domina la inicialización de algoritmos genéticos en Python.</p>
-            <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="cta-btn">Ingresar al Taller en denivel.com 🚀</a>
+            <h2>Da el siguiente paso en tu proyecto de investigación o profesional</h2>
+            <p style="color: var(--text-muted); margin: 12px 0 25px;">Ingresa a la plataforma y domina el ciclo evolutivo completo en Python.</p>
+            <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="cta-btn">Inscribirme al Curso en denivel.com 🚀</a>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Natural Code Lab • Taller de Algoritmos Genéticos para la Comunidad Científica (denivel.com)</p>
+        <p>© 2026 Natural Code Lab • Curso de Algoritmos Genéticos para la Comunidad Científica (denivel.com)</p>
     </footer>
 
 </body>
