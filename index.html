@@ -48,19 +48,14 @@
         .video-container { max-width: 820px; margin: 0 auto 40px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.08); border: 1px solid var(--border); background: #000; position: relative; padding-bottom: 56.25%; height: 0; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
-        /* Pricing Section */
-        .pricing-section { margin: 40px 0 60px; }
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 850px; margin: 0 auto; }
-        .price-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 32px 24px; text-align: center; position: relative; transition: transform 0.2s, box-shadow 0.2s; }
-        .price-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .price-card.featured { border: 2px solid var(--price-student); background: #f0f9ff; }
-        .price-tag-featured { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--price-student); color: white; font-size: 0.75rem; font-weight: 700; padding: 4px 14px; border-radius: 12px; text-transform: uppercase; }
-        .price-title { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px; }
-        .price-amount { font-size: 2.2rem; font-weight: 800; color: var(--text-main); margin: 12px 0 4px; }
-        .price-currency { font-size: 0.9rem; color: var(--text-muted); font-weight: 600; margin-bottom: 20px; }
-        .price-features { list-style: none; text-align: left; margin-bottom: 24px; }
-        .price-features li { font-size: 0.88rem; color: var(--text-muted); padding: 6px 0; border-bottom: 1px dashed var(--border); display: flex; align-items: center; }
-        .price-features li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 8px; }
+        /* Platform & Guest Credentials Section */
+        .platform-section { margin: 30px 0 50px; }
+        .platform-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 32px; max-width: 850px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .platform-header { text-align: center; margin-bottom: 24px; }
+        .platform-title { font-size: 1.3rem; font-weight: 700; color: var(--text-main); margin-bottom: 6px; }
+        .credentials-box { background: var(--highlight-bg); border: 1px solid #a7f3d0; border-radius: 8px; padding: 20px; text-align: center; max-width: 500px; margin: 0 auto; }
+        .credentials-title { font-size: 0.9rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; text-transform: uppercase; }
+        .cred-item { font-family: monospace; font-size: 1rem; color: var(--text-main); background: var(--surface); border: 1px solid var(--border); padding: 6px 12px; border-radius: 4px; display: inline-block; margin: 4px; }
 
         /* Insights / Key Info Section */
         .insights-section { margin-bottom: 50px; }
@@ -73,15 +68,6 @@
         /* Section Titles */
         .section-title { text-align: center; font-size: 1.75rem; font-weight: 800; margin-bottom: 10px; }
         .section-desc { text-align: center; color: var(--text-muted); margin-bottom: 35px; font-size: 0.95rem; }
-
-        /* Instructor Section */
-        .instructor-section { padding: 45px 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 50px; }
-        .instructor-card { max-width: 850px; margin: 0 auto; background: var(--bg-main); border: 1px solid var(--border); border-radius: 12px; padding: 28px; text-align: center; }
-        .instructor-name { font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-bottom: 6px; }
-        .instructor-title { font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 16px; }
-        .instructor-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 16px; }
-        .link-btn { background: var(--surface); border: 1px solid var(--border); color: var(--text-main); padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
-        .link-btn:hover { border-color: var(--primary); color: var(--primary); }
 
         /* Syllabus Section - 4 Fases */
         .syllabus-section { padding: 50px 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -96,6 +82,15 @@
         .module-list li:last-child { border-bottom: none; }
         .module-list li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 10px; }
 
+        /* Instructor Section */
+        .instructor-section { padding: 45px 0; background: var(--surface); border-bottom: 1px solid var(--border); margin-bottom: 50px; }
+        .instructor-card { max-width: 850px; margin: 0 auto; background: var(--bg-main); border: 1px solid var(--border); border-radius: 12px; padding: 28px; text-align: center; }
+        .instructor-name { font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-bottom: 6px; }
+        .instructor-title { font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 16px; }
+        .instructor-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 16px; }
+        .link-btn { background: var(--surface); border: 1px solid var(--border); color: var(--text-main); padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        .link-btn:hover { border-color: var(--primary); color: var(--primary); }
+
         /* Multidisciplinary Applications */
         .apps-section { padding: 50px 0; }
         .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
@@ -103,14 +98,19 @@
         .app-item h4 { font-size: 0.95rem; margin-bottom: 6px; color: var(--text-main); }
         .app-item p { font-size: 0.85rem; color: var(--text-muted); }
 
-        /* Platform & Guest Credentials Section */
-        .platform-section { margin: 50px 0; }
-        .platform-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 32px; max-width: 850px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-        .platform-header { text-align: center; margin-bottom: 24px; }
-        .platform-title { font-size: 1.3rem; font-weight: 700; color: var(--text-main); margin-bottom: 6px; }
-        .credentials-box { background: var(--highlight-bg); border: 1px solid #a7f3d0; border-radius: 8px; padding: 20px; text-align: center; max-width: 500px; margin: 0 auto; }
-        .credentials-title { font-size: 0.9rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; text-transform: uppercase; }
-        .cred-item { font-family: monospace; font-size: 1rem; color: var(--text-main); background: var(--surface); border: 1px solid var(--border); padding: 6px 12px; border-radius: 4px; display: inline-block; margin: 4px; }
+        /* Pricing Section */
+        .pricing-section { margin: 50px 0 60px; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 850px; margin: 0 auto; }
+        .price-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 32px 24px; text-align: center; position: relative; transition: transform 0.2s, box-shadow 0.2s; }
+        .price-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .price-card.featured { border: 2px solid var(--price-student); background: #f0f9ff; }
+        .price-tag-featured { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--price-student); color: white; font-size: 0.75rem; font-weight: 700; padding: 4px 14px; border-radius: 12px; text-transform: uppercase; }
+        .price-title { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px; }
+        .price-amount { font-size: 2.2rem; font-weight: 800; color: var(--text-main); margin: 12px 0 4px; }
+        .price-currency { font-size: 0.9rem; color: var(--text-muted); font-weight: 600; margin-bottom: 20px; }
+        .price-features { list-style: none; text-align: left; margin-bottom: 24px; }
+        .price-features li { font-size: 0.88rem; color: var(--text-muted); padding: 6px 0; border-bottom: 1px dashed var(--border); display: flex; align-items: center; }
+        .price-features li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 8px; }
 
         /* Projects & Consulting Section */
         .projects-section { margin: 50px 0; }
@@ -179,41 +179,19 @@
             </div>
         </section>
 
-        <!-- Pricing Section -->
-        <section class="pricing-section">
-            <h2 class="section-title">Inversión del Curso</h2>
-            <p class="section-desc">Accede a las 4 Fases del programa académico con tarifa preferencial para la comunidad estudiantil:</p>
-
-            <div class="pricing-grid">
-                <!-- Tarjeta Estudiantes/Tesistas -->
-                <div class="price-card featured">
-                    <span class="price-tag-featured">Tarifa Preferencial</span>
-                    <div class="price-title">Estudiantes y Tesistas</div>
-                    <div class="price-amount">$2,499 MXN</div>
-                    <div class="price-currency">Pago único • Acceso total</div>
-                    <ul class="price-features">
-                        <li>Acceso completo a las 4 Fases del Curso</li>
-                        <li>Código fuente en Python listo para reutilizar</li>
-                        <li>Entorno privado Moodle en Natural Code Lab</li>
-                        <li>Asesoría y acompañamiento del instructor</li>
-                        <li>Constancia de participación incluida</li>
-                    </ul>
-                    <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav" style="background: var(--price-student); display: block;">Inscribirme con Descuento 🚀</a>
+        <!-- Plataforma y Acceso como Invitado (Movido aquí) -->
+        <section class="platform-section">
+            <div class="platform-card">
+                <div class="platform-header">
+                    <div class="platform-title">🏫 Plataforma de Aprendizaje: Natural Code Lab</div>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">El curso se imparte dentro del entorno privado Moodle en <a href="https://www.denivel.com" target="_blank" style="color: var(--primary); font-weight: 600;">www.denivel.com</a></p>
                 </div>
 
-                <!-- Tarjeta Público General -->
-                <div class="price-card">
-                    <div class="price-title">Público General e Industria</div>
-                    <div class="price-amount">$3,988 MXN</div>
-                    <div class="price-currency">Pago único • Acceso total</div>
-                    <ul class="price-features">
-                        <li>Acceso completo a las 4 Fases del Curso</li>
-                        <li>Código fuente en Python listo para reutilizar</li>
-                        <li>Entorno privado Moodle en Natural Code Lab</li>
-                        <li>Aplicación a proyectos profesionales/industriales</li>
-                        <li>Constancia de participación incluida</li>
-                    </ul>
-                    <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav" style="display: block;">Inscribirme al Curso 🚀</a>
+                <div class="credentials-box">
+                    <div class="credentials-title">🔑 Acceso de Prueba como Invitado</div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Explora el entorno de clase con las siguientes credenciales de muestra:</p>
+                    <div><strong>Usuario:</strong> <span class="cred-item">usuario_invitado</span></div>
+                    <div><strong>Contraseña:</strong> <span class="cred-item">invitaDo77#</span></div>
                 </div>
             </div>
         </section>
@@ -265,9 +243,9 @@
                         <span class="module-tag">Módulo 1</span>
                     </div>
                     <ul class="module-list">
-                        <li>Traducción del problema real: Mapeo del Genotipo al Fenotipo [1.1].</li>
-                        <li>Codificación de cromosomas en Python: Cadenas Binarias y Vectores Reales [1.2, 1.3].</li>
-                        <li>Diseño y formulación matemática de la Función de Aptitud (Fitness) [2.1].</li>
+                        <li>Traducción del problema real: Mapeo del Genotipo al Fenotipo.</li>
+                        <li>Codificación de cromosomas en Python: Cadenas Binarias y Vectores Reales.</li>
+                        <li>Diseño y formulación matemática de la Función de Aptitud (Fitness).</li>
                         <li>Inicialización de la Población (Generación 0) y muestreo de diversidad.</li>
                     </ul>
                 </div>
@@ -279,10 +257,10 @@
                         <span class="module-tag">Módulo 2</span>
                     </div>
                     <ul class="module-list">
-                        <li>Mecanismos darwinianos: Supervivencia del más apto aplicada al código [2.1].</li>
-                        <li>Selección por Torneo: Control numérico de la presión selectiva mediante k [2.2].</li>
-                        <li>Selección por Rueda de Ruleta (Proporcional) y Selección por Rango [2.3, 2.4].</li>
-                        <li>Estrategias de Elitismo para preservar los mejores especímenes [2.5].</li>
+                        <li>Mecanismos darwinianos: Supervivencia del más apto aplicada al código.</li>
+                        <li>Selección por Torneo: Control numérico de la presión selectiva mediante k.</li>
+                        <li>Selección por Rueda de Ruleta (Proporcional) y Selección por Rango.</li>
+                        <li>Estrategias de Elitismo para preservar los mejores especímenes.</li>
                     </ul>
                 </div>
 
@@ -293,9 +271,9 @@
                         <span class="module-tag">Módulo 3</span>
                     </div>
                     <ul class="module-list">
-                        <li>Fundamentos de la recombinación: Intercambio de bloques constructivos [3.1].</li>
-                        <li>Operadores de Cruzamiento: Un Punto, Múltiples Puntos y Cruzamiento Uniforme [3.2, 3.3, 3.4].</li>
-                        <li>Calibración de la Tasa de Cruza (r_cross) para balancear exploración y explotación [3.1].</li>
+                        <li>Fundamentos de la recombinación: Intercambio de bloques constructivos.</li>
+                        <li>Operadores de Cruzamiento: Un Punto, Múltiples Puntos y Cruzamiento Uniforme.</li>
+                        <li>Calibración de la Tasa de Cruza (r_cross) para balancear exploración y explotación.</li>
                     </ul>
                 </div>
 
@@ -306,10 +284,10 @@
                         <span class="module-tag">Módulo 4</span>
                     </div>
                     <ul class="module-list">
-                        <li>Mecanismos de mutación binaria (Bit Flipping) y mutación real uniforme [4.1, 4.2, 4.3].</li>
-                        <li>Formulación de la Tasa de Mutación Óptima (p_m = 1/L) [4.1].</li>
-                        <li>Control de límites físicos mediante operador de Clipping [4.4].</li>
-                        <li>Proyecto Aplicado: Optimización en la Función Rastrigin (Hiper-multimodal 3D) [4.4].</li>
+                        <li>Mecanismos de mutación binaria (Bit Flipping) y mutación real uniforme.</li>
+                        <li>Formulación de la Tasa de Mutación Óptima (p_m = 1/L).</li>
+                        <li>Control de límites físicos mediante operador de Clipping.</li>
+                        <li>Proyecto Aplicado: Optimización en la Función Rastrigin (Hiper-multimodal 3D).</li>
                     </ul>
                 </div>
             </div>
@@ -355,20 +333,41 @@
             </div>
         </section>
 
-        <!-- Plataforma y Acceso como Invitado -->
-        <section class="platform-section">
-            <div class="platform-card">
-                <div class="platform-header">
-                    <div class="platform-title">🏫 Plataforma de Aprendizaje: Natural Code Lab</div>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">El curso se imparte dentro del entorno privado Moodle en <a href="https://www.denivel.com" target="_blank" style="color: var(--primary); font-weight: 600;">www.denivel.com</a></p>
+        <!-- Pricing Section (Movido aquí) -->
+        <section class="pricing-section">
+            <h2 class="section-title">Inversión del Curso</h2>
+            <p class="section-desc">Accede a las 4 Fases del programa académico con tarifa preferencial para la comunidad estudiantil:</p>
+
+            <div class="pricing-grid">
+                <!-- Tarjeta Estudiantes/Tesistas -->
+                <div class="price-card featured">
+                    <span class="price-tag-featured">Tarifa Preferencial</span>
+                    <div class="price-title">Estudiantes y Tesistas</div>
+                    <div class="price-amount">$2,499 MXN</div>
+                    <div class="price-currency">Pago único • Acceso total</div>
+                    <ul class="price-features">
+                        <li>Acceso completo a las 4 Fases del Curso</li>
+                        <li>Código fuente en Python listo para reutilizar</li>
+                        <li>Entorno privado Moodle en Natural Code Lab</li>
+                        <li>Asesoría y acompañamiento del instructor</li>
+                        <li>Constancia de participación incluida</li>
+                    </ul>
+                    <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav" style="background: var(--price-student); display: block;">Inscribirme con Descuento 🚀</a>
                 </div>
 
-                <div class="credentials-box">
-                    <div class="credentials-title">🔑 Acceso como Invitado</div>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Explora el Taller con estas credenciales:</p>
-                    <div><strong>Usuario:</strong> <span class="cred-item">usuario_invitado</span></div>
-                    <div><strong>Contraseña:</strong> <span class="cred-item">invitaDo77#</span></div>
-                    <div><strong>Sitio:</strong> <span class="cred-item">www.denivel.com</span></div>
+                <!-- Tarjeta Público General -->
+                <div class="price-card">
+                    <div class="price-title">Público General e Industria</div>
+                    <div class="price-amount">$3,988 MXN</div>
+                    <div class="price-currency">Pago único • Acceso total</div>
+                    <ul class="price-features">
+                        <li>Acceso completo a las 4 Fases del Curso</li>
+                        <li>Código fuente en Python listo para reutilizar</li>
+                        <li>Entorno privado Moodle en Natural Code Lab</li>
+                        <li>Aplicación a proyectos profesionales/industriales</li>
+                        <li>Constancia de participación incluida</li>
+                    </ul>
+                    <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav" style="display: block;">Inscribirme al Curso 🚀</a>
                 </div>
             </div>
         </section>
