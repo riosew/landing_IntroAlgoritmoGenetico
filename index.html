@@ -69,9 +69,11 @@
         .feature-item .icon { color: var(--primary); font-weight: 800; font-size: 1.1rem; flex-shrink: 0; }
         .feature-item strong { color: var(--text-main); }
         
-        .consulting-note { background: var(--highlight-bg); border-left: 4px solid var(--primary); padding: 12px 16px; border-radius: 0 8px 8px 0; font-size: 0.88rem; color: var(--text-main); margin-top: 18px; }
+        .consulting-note { background: var(--highlight-bg); border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 8px 8px 0; font-size: 0.9rem; color: var(--text-main); margin-top: 18px; line-height: 1.5; }
+        .consulting-note a { color: var(--primary); font-weight: 700; text-decoration: underline; margin-left: 4px; }
+        .consulting-note a:hover { color: var(--primary-hover); }
 
-        /* Video Showcase Gallery (3 videos simétricos) */
+        /* Video Showcase Gallery */
         .video-gallery-section { padding: 40px 0 50px; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 50px; }
         .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 980px; margin: 0 auto; }
         .video-card { background: var(--bg-main); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
@@ -82,11 +84,11 @@
         .video-tag { font-size: 0.72rem; font-weight: 700; color: var(--primary); text-transform: uppercase; background: var(--accent-bg); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
         .video-title { font-size: 0.95rem; font-weight: 700; color: var(--text-main); line-height: 1.4; }
 
-        /* Insights / Key Info Section */
+        /* Insights / Key Info Section (4 elementos perfectamente simétricos) */
         .insights-section { margin-bottom: 50px; }
-        .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; max-width: 950px; margin: 0 auto; }
-        .insight-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-align: center; }
-        .insight-card .icon { font-size: 1.5rem; margin-bottom: 8px; }
+        .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 950px; margin: 0 auto; }
+        .insight-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 22px 18px; text-align: center; }
+        .insight-card .icon { font-size: 1.6rem; margin-bottom: 8px; }
         .insight-card .label { font-size: 0.8rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; letter-spacing: 0.05em; }
         .insight-card .value { font-size: 1.05rem; font-weight: 700; color: var(--text-main); margin-top: 4px; }
 
@@ -107,13 +109,15 @@
         .module-list li:last-child { border-bottom: none; }
         .module-list li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 10px; }
 
-        /* Instructor Section */
-        .instructor-section { padding: 45px 0; background: var(--surface); border-bottom: 1px solid var(--border); margin-bottom: 50px; }
-        .instructor-card { max-width: 850px; margin: 0 auto; background: var(--bg-main); border: 1px solid var(--border); border-radius: 12px; padding: 28px; text-align: center; }
-        .instructor-name { font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-bottom: 6px; }
-        .instructor-title { font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-bottom: 16px; }
-        .instructor-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 16px; }
-        .link-btn { background: var(--surface); border: 1px solid var(--border); color: var(--text-main); padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
+        /* Instructor Section (Con Reseña Detallada) */
+        .instructor-section { padding: 50px 0; background: var(--surface); border-bottom: 1px solid var(--border); margin-bottom: 50px; }
+        .instructor-card { max-width: 880px; margin: 0 auto; background: var(--bg-main); border: 1px solid var(--border); border-radius: 14px; padding: 36px; text-align: center; }
+        .instructor-card .section-title { font-size: 1.6rem; margin-bottom: 6px; }
+        .instructor-name { font-size: 1.35rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+        .instructor-subtitle { font-size: 0.9rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 20px; }
+        .instructor-bio { font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; max-width: 780px; margin: 0 auto 16px; text-align: left; }
+        .instructor-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 24px; }
+        .link-btn { background: var(--surface); border: 1px solid var(--border); color: var(--text-main); padding: 9px 16px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; transition: all 0.2s; }
         .link-btn:hover { border-color: var(--primary); color: var(--primary); }
 
         /* Multidisciplinary Applications */
@@ -243,13 +247,14 @@
                     </ul>
 
                     <div class="consulting-note">
-                        💡 <strong>Asesoría Personalizada:</strong> La asesoría personalizada está disponible con costo extra para construir tu algoritmo a medida.
+                        💡 <strong>Asesoría Personalizada:</strong> La asesoría personalizada está disponible con costo extra para construir tu algoritmo a medida. 
+                        <a href="https://www.linkedin.com/in/ernesto-r%C3%ADos-willars-304325138/" target="_blank">Contactar al Instructor en LinkedIn 💼</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Galería de Videos Complementarios (3 videos perfectamente equilibrados) -->
+        <!-- Galería de Videos Complementarios -->
         <section class="video-gallery-section">
             <h2 class="section-title">🎥 Más Explicaciones y Casos de Estudio en Video</h2>
             <p class="section-desc">Conoce la fundamentación teórica y metodológica de la computación evolutiva:</p>
@@ -290,7 +295,7 @@
             </div>
         </section>
 
-        <!-- Insights del Taller -->
+        <!-- Insights del Taller (4 casillas simétricas) -->
         <section class="insights-section">
             <h2 class="section-title">Ficha Técnica del Programa</h2>
             <p class="section-desc">Detalles operativos de la formación:</p>
@@ -315,11 +320,6 @@
                     <div class="icon">👨‍🏫</div>
                     <div class="label">Instructor</div>
                     <div class="value">Dr. Ernesto Ríos-Willars</div>
-                </div>
-                <div class="insight-card">
-                    <div class="icon">📜</div>
-                    <div class="label">Constancia</div>
-                    <div class="value">Incluida</div>
                 </div>
             </div>
         </section>
@@ -387,14 +387,22 @@
             </div>
         </section>
 
-        <!-- Instructor Section -->
+        <!-- Instructor Section (Apartado "Quién es el instructor?") -->
         <section class="instructor-section">
             <div class="instructor-card">
+                <h2 class="section-title">¿Quién es el instructor?</h2>
                 <div class="instructor-name">Dr. Ernesto Ríos-Willars</div>
-                <div class="instructor-title">Instructor del Taller • Especialista en Computación Evolutiva</div>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Conoce más sobre la trayectoria académica, investigaciones y publicaciones del instructor:</p>
+                <div class="instructor-subtitle">Especialista en Algoritmos de Alto Desempeño y Computación Bioinspirada</div>
+                
+                <p class="instructor-bio">
+                    El <strong>Dr. Ernesto Ríos-Willars</strong> es especialista en algoritmos de alto desempeño basados en computación bioinspirada y optimización evolutiva. Su trayectoria abarca el desarrollo de modelos avanzados en bioinformática, ingeniería y ciencia de datos.
+                </p>
+                <p class="instructor-bio">
+                    Es reconocido como miembro del <strong>Sistema Nacional de Investigadoras e Investigadores (SNII Nivel 1)</strong> en México y cuenta con diversas publicaciones de impacto internacional en el ámbito multidisciplinario. Asimismo, cuenta con el respaldo de infraestructura de alto rendimiento gracias a la asignación de recursos de supercómputo por parte del <strong>Centro Nacional de Supercómputo (CNS-IPICYT)</strong>.
+                </p>
+
                 <div class="instructor-links">
-                    <a href="https://www.linkedin.com/in/ernesto-rios-willars-304325138/" target="_blank" class="link-btn">💼 Perfil de LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/ernesto-r%C3%ADos-willars-304325138/" target="_blank" class="link-btn">💼 Perfil de LinkedIn</a>
                     <a href="https://denivel.com/mod/page/view.php?id=406" target="_blank" class="link-btn">📊 Productividad Científica</a>
                     <a href="https://orcid.org/0000-0002-7157-8884" target="_blank" class="link-btn">🆔 Registro ORCID</a>
                     <a href="https://scholar.google.com/citations?user=EL0hQ0EAAAAJ&hl=es" target="_blank" class="link-btn">🎓 Google Académico</a>
@@ -532,7 +540,7 @@
                         <a href="https://denivel.com/mod/page/view.php?id=419" target="_blank" class="contact-btn-web">
                             🌐 Formulario de Contacto en denivel.com
                         </a>
-                        <a href="https://www.linkedin.com/in/ernesto-rios-willars-304325138/" target="_blank" class="contact-btn-in">
+                        <a href="https://www.linkedin.com/in/ernesto-r%C3%ADos-willars-304325138/" target="_blank" class="contact-btn-in">
                             💼 Perfil de LinkedIn
                         </a>
                     </div>
