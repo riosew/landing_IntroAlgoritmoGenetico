@@ -84,7 +84,7 @@
         .video-tag { font-size: 0.72rem; font-weight: 700; color: var(--primary); text-transform: uppercase; background: var(--accent-bg); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
         .video-title { font-size: 0.95rem; font-weight: 700; color: var(--text-main); line-height: 1.4; }
 
-        /* Insights / Key Info Section (4 elementos perfectamente simétricos) */
+        /* Insights / Key Info Section */
         .insights-section { margin-bottom: 50px; }
         .insights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 950px; margin: 0 auto; }
         .insight-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 22px 18px; text-align: center; }
@@ -109,7 +109,7 @@
         .module-list li:last-child { border-bottom: none; }
         .module-list li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 10px; }
 
-        /* Instructor Section (Con Reseña Detallada) */
+        /* Instructor Section */
         .instructor-section { padding: 50px 0; background: var(--surface); border-bottom: 1px solid var(--border); margin-bottom: 50px; }
         .instructor-card { max-width: 880px; margin: 0 auto; background: var(--bg-main); border: 1px solid var(--border); border-radius: 14px; padding: 36px; text-align: center; }
         .instructor-card .section-title { font-size: 1.6rem; margin-bottom: 6px; }
@@ -127,16 +127,18 @@
         .app-item h4 { font-size: 0.95rem; margin-bottom: 6px; color: var(--text-main); }
         .app-item p { font-size: 0.85rem; color: var(--text-muted); }
 
-        /* Pricing Section */
+        /* Pricing Section Con Descuentos por Tiempo Limitado */
         .pricing-section { margin: 50px 0 60px; }
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 850px; margin: 0 auto; }
         .price-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 32px 24px; text-align: center; position: relative; transition: transform 0.2s, box-shadow 0.2s; }
         .price-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         .price-card.featured { border: 2px solid var(--price-student); background: #f0f9ff; }
-        .price-tag-featured { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--price-student); color: white; font-size: 0.75rem; font-weight: 700; padding: 4px 14px; border-radius: 12px; text-transform: uppercase; }
+        .price-tag-featured { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--price-student); color: white; font-size: 0.75rem; font-weight: 700; padding: 4px 14px; border-radius: 12px; text-transform: uppercase; white-space: nowrap; }
         .price-title { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px; }
-        .price-amount { font-size: 2.2rem; font-weight: 800; color: var(--text-main); margin: 12px 0 4px; }
-        .price-currency { font-size: 0.9rem; color: var(--text-muted); font-weight: 600; margin-bottom: 20px; }
+        .price-badge-promo { background: #fee2e2; color: #dc2626; font-size: 0.78rem; font-weight: 800; padding: 3px 10px; border-radius: 12px; display: inline-block; margin: 4px 0 10px; border: 1px solid #fca5a5; }
+        .price-amount { font-size: 2.3rem; font-weight: 800; color: var(--text-main); margin: 6px 0 2px; }
+        .price-old { text-decoration: line-through; color: #94a3b8; font-weight: 600; font-size: 0.95rem; margin-bottom: 12px; }
+        .price-currency { font-size: 0.88rem; color: var(--text-muted); font-weight: 600; margin-bottom: 20px; }
         .price-features { list-style: none; text-align: left; margin-bottom: 24px; }
         .price-features li { font-size: 0.88rem; color: var(--text-muted); padding: 6px 0; border-bottom: 1px dashed var(--border); display: flex; align-items: center; }
         .price-features li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 8px; }
@@ -195,7 +197,7 @@
         <!-- Hero -->
         <section class="hero">
             <span class="badge">Curso Completo • 4 Fases Integrales • Programación en Python</span>
-            <h1>Taller de Algoritmo Genético para Optimización</h1>
+            <h1>Optimización Evolutiva para Tesistas, Investigadores y Profesionales</h1>
             <p class="subtitle">Aprende a programar el ciclo evolutivo completo de un Algoritmo Genético desde cero para resolver problemas complejos de optimización continua y discreta.</p>
 
             <div class="target-audience">
@@ -295,7 +297,7 @@
             </div>
         </section>
 
-        <!-- Insights del Taller (4 casillas simétricas) -->
+        <!-- Insights del Taller -->
         <section class="insights-section">
             <h2 class="section-title">Ficha Técnica del Programa</h2>
             <p class="section-desc">Detalles operativos de la formación:</p>
@@ -387,7 +389,7 @@
             </div>
         </section>
 
-        <!-- Instructor Section (Apartado "Quién es el instructor?") -->
+        <!-- Instructor Section -->
         <section class="instructor-section">
             <div class="instructor-card">
                 <h2 class="section-title">¿Quién es el instructor?</h2>
@@ -435,17 +437,19 @@
             </div>
         </section>
 
-        <!-- Pricing Section -->
+        <!-- Pricing Section Con Descuentos por Tiempo Limitado -->
         <section class="pricing-section">
             <h2 class="section-title">Inversión del Curso</h2>
-            <p class="section-desc">Accede a las 4 Fases del programa académico con tarifa preferencial para la comunidad estudiantil:</p>
+            <p class="section-desc">Aprovecha nuestras tarifas promocionales por tiempo limitado para la comunidad académica y público general:</p>
 
             <div class="pricing-grid">
                 <!-- Tarjeta Estudiantes/Tesistas -->
                 <div class="price-card featured">
-                    <span class="price-tag-featured">Tarifa Preferencial</span>
+                    <span class="price-tag-featured">🔥 25% OFF • Tiempo Limitado</span>
                     <div class="price-title">Estudiantes y Tesistas</div>
-                    <div class="price-amount">$2,499 MXN</div>
+                    <div class="price-badge-promo">Descuento del 25% Aplicado</div>
+                    <div class="price-amount">$1,874 <span style="font-size: 1rem; color: var(--text-muted);">MXN</span></div>
+                    <div class="price-old">Antes: $2,499 MXN</div>
                     <div class="price-currency">Pago único • Acceso total</div>
                     <ul class="price-features">
                         <li>Acceso completo a las 4 Fases del Curso</li>
@@ -454,13 +458,16 @@
                         <li>Asesoría y acompañamiento del instructor</li>
                         <li>Constancia de participación incluida</li>
                     </ul>
-                    <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav" style="background: var(--price-student); display: block;">Inscribirme con Descuento 🚀</a>
+                    <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav" style="background: var(--price-student); display: block;">Inscribirme con 25% OFF 🚀</a>
                 </div>
 
                 <!-- Tarjeta Público General -->
                 <div class="price-card">
+                    <span class="price-tag-featured" style="background: #059669;">🏷️ 10% OFF • Tiempo Limitado</span>
                     <div class="price-title">Público General e Industria</div>
-                    <div class="price-amount">$3,988 MXN</div>
+                    <div class="price-badge-promo" style="background: #ecfdf5; color: #047857; border-color: #a7f3d0;">Descuento del 10% Aplicado</div>
+                    <div class="price-amount">$3,589 <span style="font-size: 1rem; color: var(--text-muted);">MXN</span></div>
+                    <div class="price-old">Antes: $3,988 MXN</div>
                     <div class="price-currency">Pago único • Acceso total</div>
                     <ul class="price-features">
                         <li>Acceso completo a las 4 Fases del Curso</li>
@@ -469,7 +476,7 @@
                         <li>Aplicación a proyectos profesionales/industriales</li>
                         <li>Constancia de participación incluida</li>
                     </ul>
-                    <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav" style="display: block;">Inscribirme al Curso 🚀</a>
+                    <a href="https://denivel.com/mod/page/view.php?id=421" target="_blank" class="btn-nav" style="display: block;">Inscribirme con 10% OFF 🚀</a>
                 </div>
             </div>
         </section>
